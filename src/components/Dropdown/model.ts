@@ -12,6 +12,7 @@ import type {
 export type IDropdownRef = {
   open: () => void;
   close: () => void;
+  isVisible: boolean;
 };
 
 export interface DropdownProps<T> {
