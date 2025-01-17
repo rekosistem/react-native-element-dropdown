@@ -122,7 +122,12 @@ const DropdownComponent = React.forwardRef<IDropdownRef, DropdownProps<any>>(
     }, [W, orientation]);
 
     useImperativeHandle(currentRef, () => {
-      return { open: eventOpen, close: eventClose, isVisible: visible };
+      return {
+        open: eventOpen,
+        close: eventClose,
+        isVisible: visible,
+        setVisible,
+      };
     });
 
     useEffect(() => {

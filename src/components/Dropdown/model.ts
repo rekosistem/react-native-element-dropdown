@@ -13,6 +13,7 @@ export type IDropdownRef = {
   open: () => void;
   close: () => void;
   isVisible: boolean;
+  setVisible: (visible: boolean) => void;
 };
 
 export interface DropdownProps<T> {
