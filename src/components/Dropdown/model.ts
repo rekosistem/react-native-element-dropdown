@@ -1,4 +1,5 @@
 import type React from 'react';
+import { ReactNode } from 'react';
 import type {
   StyleProp,
   TextStyle,
@@ -59,6 +60,7 @@ export interface DropdownProps<T> {
   closeModalWhenSelectedItem?: boolean;
   excludeItems?: T[];
   excludeSearchItems?: T[];
+  renderBottomChildren?: ReactNode;
   onChange: (item: T) => void;
   renderLeftIcon?: (visible?: boolean) => React.ReactElement | null;
   renderRightIcon?: (visible?: boolean) => React.ReactElement | null;

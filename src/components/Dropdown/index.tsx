@@ -95,6 +95,7 @@ const DropdownComponent = React.forwardRef<IDropdownRef, DropdownProps<any>>(
       closeModalWhenSelectedItem = true,
       excludeItems = [],
       excludeSearchItems = [],
+      renderBottomChildren,
     } = props;
 
     const ref = useRef<View>(null);
@@ -620,6 +621,7 @@ const DropdownComponent = React.forwardRef<IDropdownRef, DropdownProps<any>>(
               {isInverted && _renderListHelper()}
               {renderSearch()}
               {!isInverted && _renderListHelper()}
+              {renderBottomChildren}
             </View>
           </TouchableWithoutFeedback>
         );
@@ -634,6 +636,7 @@ const DropdownComponent = React.forwardRef<IDropdownRef, DropdownProps<any>>(
         scrollIndex,
         showsVerticalScrollIndicator,
         testID,
+        renderBottomChildren,
       ]
     );
 
