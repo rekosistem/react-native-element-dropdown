@@ -127,6 +127,7 @@ const DropdownComponent = React.forwardRef<IDropdownRef, DropdownProps<any>>(
         close: eventClose,
         isVisible: visible,
         setVisible,
+        searchValue: searchText,
       };
     });
 

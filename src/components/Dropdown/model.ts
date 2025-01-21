@@ -14,6 +14,7 @@ export type IDropdownRef = {
   close: () => void;
   isVisible: boolean;
   setVisible: (visible: boolean) => void;
+  searchValue: string;
 };
 
 export interface DropdownProps<T> {
