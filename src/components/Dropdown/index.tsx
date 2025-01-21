@@ -552,9 +552,9 @@ const DropdownComponent = React.forwardRef<IDropdownRef, DropdownProps<any>>(
         if (renderInputSearch) {
           return renderInputSearch((text) => {
             if (onChangeText) {
-              setSearchText(text);
               onChangeText(text);
             }
+            setSearchText(text);
             onSearch(text);
           });
         } else {
